@@ -1,7 +1,5 @@
 const allowOrigin = ['http://localhost:8080', 'http://localhost:2010', 'http://localhost:9527']
 module.exports = (req, res, next) => {
-    console.log('123')
-
   // cors
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Methods', '*')

@@ -68,6 +68,6 @@
     width: 80vw;
 }
 
-/deep/ .el-form-item__label{  
-    text-align: center;
+/deep/ .el-pagination{
+    text-align: right !important;
 }

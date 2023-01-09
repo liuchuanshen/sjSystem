@@ -1,29 +1,38 @@
-/****   http.js   ****/
-// 导入封装好的axios实例
-import service from './service'
+// 导入axios
+import axios from 'axios';
+// import store from '../store';
 
-const http ={
-    /**
-     * methods: 请求
-     * @param url 请求地址 
-     * @param params 请求参数
-     */
-    get(url,params){
-        const config = {
-            method: 'get',
-            url:url
-        }
-        if(params) config.params = params
-        return service(config)
-    },
-    post(url,params){
-        const config = {
-            method: 'post',
-            url:url
-        }
-        if(params) config.data = params
-        return service(config)
-    },
-}
-//导出
-export default http
+// 进行一些全局配置
+// 公共路由(网络请求地址)
+axios.defaults.baseURL = 'http://localhost:2010/api';
+// 请求响应超时时间
+// axios.defaults.timeout = 5000;
+
+// 封装自己的get/post方法
+export default {
+  get: function(path = '', data = {}) {
+    return new Promise(function(resolve, reject) {
+      axios.get(path, {
+        params: data
+      })
+        .then(function(response) {
+          // 按需求来，这里我需要的是response.data，所以返回response.data，一般直接返回response
+          resolve(response.data);
+        })
+        .catch(function(error) {
+          reject(error);
+        });
+    });
+  },
+  post: function(path = '', data = {}) {
+    return new Promise(function(resolve, reject) {
+      axios.post(path, data)
+        .then(function(response) {
+          resolve(response.data);
+        })
+        .catch(function(error) {
+          reject(error);
+        });
+    });
+  }
+};

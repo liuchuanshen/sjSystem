@@ -15,55 +15,82 @@
         :default-sort = "{prop: 'date', order: 'descending'}"
       >
         <el-table-column
-          prop="date"
-          label="日期"
-          sortable
-          width="180"
+          prop="symbol"
+          label="市场标识代码"
+        >
+        </el-table-column>
+        <el-table-column
+          prop="code"
+          label="无市场标识代码"
         >
         </el-table-column>
         <el-table-column
           prop="name"
-          label="姓名"
-          sortable
-          width="180"
+          label="名称"
         >
         </el-table-column>
-        <el-table-column
-          prop="address"
-          label="地址"
-        >
-        </el-table-column>
-    </el-table>
+      </el-table>
+      <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page.sync="currentPage"
+        background
+        layout="total, prev, pager, next"
+        :total="1000"
+      >
+      </el-pagination>
     </div>
   </div>
 </template>
 
 <script>
+
+import { list } from '@/api/list'
+
 export default {
   name: 'Home',
   data () {
     return {
+      currentPage: 1,
       searchText:'',
       tableData: []
     }
   },
   created(){
-    this.search()
+    list().then((res)=>{
+      if(res.code === 200){
+        this.tableData = res.data.list
+      }
+    })
   },
   methods: {
     search(){
-      
-      this.$axios.get('/api/data').then((res)=>{
-        console.log('res',res)
-      }).catch(error => {
-        console.log('请求失败');
+      list({'page':this.currentPage}).then((res)=>{
+        if(res.code === 200){
+          this.tableData = res.data.list
+        }
       })
-
+    },
+    handleCurrentChange(val) {
+      list({'page':val}).then((res)=>{
+        if(res.code === 200){
+          this.tableData = res.data.list
+        }
+      })
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   @import './style.css';
+
+  /deep/ .el-pagination{
+    text-align: right;
+    margin-top: 10px
+  }
+
+  /deep/ .el-pagination__total{
+    color: #f4f4f5;
+  }
 </style>

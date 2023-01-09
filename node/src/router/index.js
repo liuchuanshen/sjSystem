@@ -2,39 +2,31 @@ const express = require('express')
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const router =  express.Router();
 const cors = require('../filter/cors')
+const { formatData } = require('../utils')
+const http = require('http');
+const request = require('request');
+const dip = require("dipiper");
+const xlsx = require("node-xlsx");
+const fs = require("fs");
+const mongo = require('../db/mongo')
 
 // CORS跨域资源共享
 router.use(cors)
 
-router.use(express.urlencoded({
-    extended: false
-}), express.json(), express.raw())
-
-router.get('/data',(req,res)=>{
-    console.log('req',req)
-    console.log('res',res)
-})
-
-// jsonp请求: 后端返回全局函数执行的js代码
-// router.get('/jsonp',(req,res)=>{
-//     let {callback} = req.query;
-//     let user = {username:'laoxie',password:123456,gender:'男',role:'admin'}
-//     res.send(`${callback}(${JSON.stringify(user)})`);
-//     // console.log('callback1=',callback1)
+// dip.stock.symbols.getStockList().then((data) =>{
+//     //数据存储、处理逻辑，请自行实现
+//     res.send(formatData({ 'data': data }))    
 // })
 
-const proxyMiddleware = createProxyMiddleware({
-    // 目标服务器
-    target: 'https://list.gome.com.cn/cat10000070-00-0-48-1-0-0-0-1-0-0-0-10-0-0-0-0-0.html?&page=2&bws=0&type=json&rank=1', 
-    // 修改请求源
-    changeOrigin: true,
-    // 路径重写
-    pathRewrite: {
-        '^/api/offer': '/api', // rewrite path
-    },
+router.get('/list', async(req, res) => {
+    let { page = 1, size = 10, sort = 'regtime', total, name } = req.query
+    const pageNum = page
+    const sizeNum = size * 1
+    total = !((total == '0' || total == 'false'))
+    const result = await mongo.find('totalList', {}, { name, pageNum, sizeNum, sort })
+    // { total: count, list }
+    // console.log('list=', list)
+    res.send(formatData({ data: result.total ? result : [] }))
 })
-
-// 只有地址匹配/api/offer，才进入这个中间件
-router.use('/offer',proxyMiddleware);
 
 module.exports = router;
