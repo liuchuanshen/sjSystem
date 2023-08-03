@@ -29,7 +29,7 @@ async function create(colName, data) {
     data = [data]
   }
 
-  console.log('data',data)
+  // console.log('data',data)
 
 
   const result = await col.insertMany(data)
@@ -94,16 +94,21 @@ async function find(colName, query = {}, { fields, pageNum, sizeNum, sort } = {}
 
     // 获取集合
     const col = db.collection(colName)
+
     if (typeof query._id === 'string') {
       query._id = ObjectId(query._id)
     }
-  
+
+    let params = query.name ? query : {}
+
+    console.log('params',params)
+
     // 操作数据库
-    let list = col.find(query, {
+    let list = col.find(params, {
       // 过滤字段
       projection: fields
     })
-  
+
     // 获取总数量
     const count = await list.count()
   
@@ -124,7 +129,7 @@ async function find(colName, query = {}, { fields, pageNum, sizeNum, sort } = {}
     }
   
     list = await list.toArray()
-  
+    
     // 关闭连接
     client.close()
   

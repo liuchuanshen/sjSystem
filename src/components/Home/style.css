@@ -66,8 +66,5 @@
 
 .table{
     width: 80vw;
-}
-
-/deep/ .el-pagination{
-    text-align: right !important;
+    height: 80vh;
 }
