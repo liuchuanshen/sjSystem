@@ -1,3 +1,11 @@
+/*
+ * @Author: Chanson Lau 
+ * @Date: 2025-02-24 16:40:51
+ * @LastEditors: Chanson Lau 
+ * @LastEditTime: 2025-03-04 10:59:24
+ * @FilePath: /code/moneySystem/src/utils/http.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 // 导入axios
 import axios from 'axios';
 // import store from '../store';
