@@ -1,20 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../views/Home/index.vue'
+import Home from '../App.vue'
+import { Message } from 'element-ui';
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
-      name: '首页',
       component: Home
     },
     {
-      path: '/home',
-      name: '首页',
+      path: '/index',
+      component: Home
+    },
+    {
+      path: '*',
       component: Home
     }
   ]
 })
+
+export default router;
