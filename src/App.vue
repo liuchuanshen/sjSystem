@@ -152,10 +152,37 @@ export default {
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .button{
-  width: 100%; 
+  width: 100%;
 }
 
+/* 响应式样式 */
+@media screen and (max-width: 768px) {
+  .el-dialog {
+    width: 90% !important;
+    margin: 0 auto;
+  }
+  
+  .el-form-item {
+    margin-bottom: 15px;
+  }
+  
+  .el-input {
+    width: 100% !important;
+  }
+  
+  .el-form-item__label {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 0 0 8px;
+  }
+  
+  .el-form-item__content {
+    margin-left: 0 !important;
+  }
+}
 </style>

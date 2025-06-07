@@ -152,4 +152,58 @@ export default {
   letter-spacing: 4px;
 }
 
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 30px;
+  }
+
+  .footer__qrcode-row {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .footer__qrcode-item img {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #fff;
+  }
+
+  .footer__qrcode-label {
+    font-size: 14px;
+  }
+
+  .footer__main {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .footer__contact,
+  .footer__company-info {
+    min-width: 100%;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  .footer__links,
+  .footer__copyright,
+  .footer__phone {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .footer__phone {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
 </style>

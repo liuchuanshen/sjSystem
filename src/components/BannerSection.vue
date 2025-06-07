@@ -28,7 +28,7 @@ export default {
 .banner {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 150px;
   overflow: hidden;
   background: #222;
   display: flex;
@@ -66,10 +66,39 @@ export default {
   justify-content: center;
   color: #fff;
   z-index: 10;
+  font-size: 20px;
+  text-align: center;
 }
 
 .button{
   width: 200px;
-  margin-top: 30px;
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 120px;
+  }
+
+  .banner-img {
+    height: 300px;
+  }
+
+  .banner-content {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .banner-content h1 {
+    font-size: 20px;
+  }
+
+  .button {
+    width: 160px;
+    font-size: 18px;
+    margin-top: 8px;
+  }
 }
 </style>
