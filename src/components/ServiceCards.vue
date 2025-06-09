@@ -6,48 +6,37 @@
         <div class="service__item" v-for="(item, index) in servicesList" :key="index">
           <div class="service__icon"><img :src="item.icon" :alt="item.title" /></div>
           <div class="service__title">{{ item.title }}</div>
-          <div class="service__desc">{{ item.desc }}</div>
         </div>
       </div>
-    </div>
-
-    <!-- 业务范围区块 -->
-    <div class="scope">
-      <div class="scope__title">业务范围 <span>只为服务优秀的您</span></div>
-      <div class="scope__list" id="scopeList"></div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'ServiceCards',
   data() {
     return {
       servicesList: [
         {
-          icon: require('@/assets/picture/case/01.jpg'),
+          icon: 'https://26680005.s21i.faiusr.com/4/ABUIABAEGAAg7siKmgYo_riptwMwUDhQ.png.webp',
           title: '提交需求',
-          desc: '无论您是自建房、民宿、别墅、度假房或者民宿，我们都能为您提供专业的建房服务。'
         },
         {
-          icon: require('@/assets/picture/case/01.jpg'),
+          icon: 'https://26680005.s21i.faiusr.com/4/ABUIABAEGAAg7siKmgYoxqbIwgYwUDhQ.png.webp',
           title: '需求沟通',
-          desc: '设计顾问与您沟通，了解建房需求，实现您对居住品质的期望，进行量身定制建房方案。'
         },
-         {
-          icon: require('@/assets/picture/case/01.jpg'),
+        {
+          icon:'https://26680005.s21i.faiusr.com/4/ABUIABAEGAAg7siKmgYo4LWDxQMwUDhQ.png.webp',
           title: '现场勘测',
-          desc: '设计师到到建房地址，了解宅基地周边情况，根据现场情况实际分析量身定制设计。'
         },
-         {
-          icon: require('@/assets/picture/case/01.jpg'),
+        {
+          icon:'https://26680005.s21i.faiusr.com/4/ABUIABAEGAAg78iKmgYo0OeamwcwUDhQ.png.webp',
           title: '设计方案',
-          desc: '通过宅基地现场情况，以及您的建房需求，设计适合您家的方案，提升生活舒适度。'
         },
-         {
-          icon: require('@/assets/picture/case/01.jpg'),
+        {
+          icon:'https://26680005.s21i.faiusr.com/4/ABUIABAEGAAg78iKmgYohpe3nAMwUDhQ.png.webp',
           title: '确认方案',
-          desc: '设计过程中，1+N设计团队，与您确认方案整体细节，施工全程为您提供建房指导服务。'
         },
       ]
     }
@@ -58,7 +47,7 @@ export default {
 <style scoped>
 /* 服务流程卡片样式 */
 .service {
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
   padding: 60px 0 40px;
 }
 
@@ -119,12 +108,6 @@ export default {
   letter-spacing: 1px;
 }
 
-.service__desc {
-  font-size: 0.98rem;
-  color: #666;
-  line-height: 1.7;
-}
-
 /* 响应式布局 */
 @media (max-width: 1000px) {
   .service__list { gap: 18px; }
@@ -134,21 +117,6 @@ export default {
 @media (max-width: 700px) {
   .service__list { flex-direction: column; gap: 16px; }
   .service__item { max-width: 100%; }
-}
-
-/* 业务范围样式 */
-.scope {
-  background: #fff;
-  padding: 56px 0 40px;
-}
-
-.scope__title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 38px;
-  letter-spacing: 2px;
 }
 
 /* 移动端适配 */

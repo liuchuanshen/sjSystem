@@ -1,12 +1,12 @@
 <template>
   <header class="header">
     <!-- <div class="logo-group">广花设计</div> -->
-    <div class="logo-group">广花设计</div>
+    <div class="logo-group">XXX</div>
     <div class="header-contact">
      <!--  <img src="../assets/picture/header/phone.svg" alt="电话" class="contact-icon" /> -->
-      <span>13131313131</span>
-      <span>18888888888</span>
-      <span>18588888888</span>
+      <i class="el-icon-phone"></i>
+      <span class="header-phone">131-3848-4787</span>
+      <span>185-8868-6184</span>
     </div>
   </header>
 </template>
@@ -51,38 +51,19 @@ export default {
   align-items: center; /* 垂直居中 */
 }
 
-.header-contact::before {
-  content: ""; /* 必须填写，否则伪元素不显示 */
-  position: absolute;
-  left: 0; /* 定位到左侧 */
-  top: 50%; /* 垂直居中 */
-  transform: translateY(-50%); /* 向上偏移50% */
-  width: 30px; /* 图标宽度 */
-  height: 30px; /* 图标高度 */
-  background: url(../assets/picture/header/phone.svg) no-repeat center/cover; /* 引入图标路径 */
-}
-
 .header-contact {
-  font-size: 25px;
-  color: #222;
+  font-size: 20px;
+  color: rgb(201, 145, 68);
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 30%;
-  gap: 5px; /* 设置子元素之间的间距，就是几个电话号码之间的间距 */
+  min-width: 500px;
+  gap: 20px; /* 设置子元素之间的间距，就是几个电话号码之间的间距 */
   position: relative; /* 确保图标与文本层级正常 */
   padding-left: 60px; /* 增加左侧与phone.svg的边距，默认图标宽度24px + 间距26px */
 }
-
-/*
-.contact-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-*/
 
 /* 移动端适配 */
 @media screen and (max-width: 768px) {
@@ -97,20 +78,15 @@ export default {
 
   .header-contact {
     font-size: 16px;
-    width: auto;
+    min-width: 200px;
     padding-left: 40px;
-  }
-
-  .header-contact::before {
-    width: 20px;
-    height: 20px;
   }
 
   .header-contact span {
     display: none;
   }
 
-  .header-contact span:first-child {
+  .header-contact .header-phone {
     display: block;
   }
 }

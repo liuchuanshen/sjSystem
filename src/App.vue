@@ -2,12 +2,54 @@
   <div id="app">
     <!-- 头部 -->
     <HeaderBar />
-    <!-- 案例轮播 -->
-    <CaseCarousel />
-    <!-- Banner 横幅 -->
-    <BannerSection @openDialog="dialogVisible = true" />
+    <!-- 菜单栏 -->
+    <div class="menu">
+      <div
+        v-for="(menu, index) in menuList"
+        :key="index"
+        :class="['menu-item', currentIndex === index ? 'active' : '']"
+        @click="selectMenu(index)"
+      >
+        {{ menu }}
+      </div>
+    </div>
+    <!-- 轮播图 -->
+    <CaseCarousel :categoryIndex="currentIndex" />
+    <div class="scope">
+      <div class="scope__title title-bold">
+        <span class="highlight">预约咨询</span> 
+        <span>开启省心服务</span>
+      </div>
+      <div class="scope__title title-small">
+        <span>每一次服务中的细节,都是对您建房体验的执着追求</span>
+      </div>
+      <el-button type="primary" @click="dialogVisible = true" class="appointmentButton">预约咨询</el-button>
+    </div>
     <!-- 服务卡片 -->
     <ServiceCards />
+
+    <div class="scope">
+      <div class="scope__title title-bold">
+        <span class="highlight">1000+</span> 
+        <span>原创案例赏鉴</span
+      ></div>
+      <div class="scope__title title-small">
+        <span>选自己喜欢的风格,过自己喜欢的生活</span>
+      </div>
+    </div>
+
+    <!-- 案例 -->
+    <CaseCards />
+    
+    <div class="scope">
+      <div class="scope__title title-bold">
+        <span class="highlight">立即预约</span> 
+        <span>开启美好生活</span
+      ></div>
+      <div class="scope__title title-small">
+        <span>专业团队，匠心筑家</span>
+      </div>
+    </div>
     <!-- 页脚 -->
     <FooterBar />
     <!-- 咨询弹窗 -->
@@ -34,24 +76,25 @@
         </el-form-item>
       </el-form>
     </el-dialog>
+    <el-backtop />
   </div>
 </template>
 
 <script>
 import HeaderBar from './components/HeaderBar.vue'
 import CaseCarousel from './components/CaseCarousel.vue'
-import BannerSection from './components/BannerSection.vue'
 import ServiceCards from './components/ServiceCards.vue'
+import CaseCards from './components/CaseCards.vue'
 import FooterBar from './components/FooterBar.vue'
 import emailjs from 'emailjs-com'
 
 export default {
   name: 'App',
   components: {
-    HeaderBar, 
-    CaseCarousel, 
-    BannerSection, 
-    ServiceCards, 
+    HeaderBar,
+    CaseCarousel,
+    ServiceCards,
+    CaseCards,
     FooterBar
   },
   data() {
@@ -63,23 +106,8 @@ export default {
         phone: '',
         desc: ''
       },
-      caseList: [
-        require('@/assets/picture/case/01.jpg'),
-        require('@/assets/picture/case/02.png'),
-        require('@/assets/picture/case/03.jpg'),
-        require('@/assets/picture/case/04.jpg'),
-        require('@/assets/picture/case/05.jpg'),
-        require('@/assets/picture/case/06.jpg'),
-        require('@/assets/picture/case/07.jpg'),
-        require('@/assets/picture/case/08.jpg'),
-        require('@/assets/picture/case/09.jpg'),
-        require('@/assets/picture/case/10.jpg'),
-        require('@/assets/picture/case/11.jpg'),
-        require('@/assets/picture/case/12.jpg'),
-        require('@/assets/picture/case/13.jpg'),
-        require('@/assets/picture/case/14.jpg'),
-        require('@/assets/picture/case/15.jpg')
-      ],
+      currentIndex: 0,
+      menuList: ['室内设计', '建筑设计', '厂房新建及改扩建', '光伏', '机电设计', '结构加固'],
       rules: {
         name: [
           { required: true, message: '请输入姓名', trigger: 'blur' }
@@ -96,6 +124,9 @@ export default {
   mounted() {
   },
   methods: {
+    selectMenu(index) {
+      this.currentIndex = index;
+    },
     async submitForm() {
       this.$refs.consultForm.validate(async valid => {
         if (!valid) {
@@ -155,8 +186,61 @@ export default {
   box-sizing: border-box;
 }
 
-.button{
-  width: 100%;
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 84px;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 1);
+  padding: 10px 10px;
+}
+
+.menu-item {
+  cursor: pointer;
+  padding-bottom: 4px;
+  color: rgba(255, 255, 255, 1);
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.menu-item.active {
+  color: rgba(214, 181, 127, 1);
+  border-color: rgba(214, 181, 127, 1);
+}
+
+.appointmentButton{
+  width: 20%;
+  margin-top: 20px;
+}
+
+.scope {
+  background: #fff;
+  padding: 56px 0 40px;
+  text-align: center;
+}
+
+.scope__title {
+  text-align: center;
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.title-bold {
+  font-weight: bold;
+}
+
+.title-small {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: rgb(136, 136, 136);
+}
+
+.highlight {
+  color: rgb(211, 177, 106);
 }
 
 /* 响应式样式 */
@@ -183,6 +267,10 @@ export default {
   
   .el-form-item__content {
     margin-left: 0 !important;
+  }
+
+  .menu {
+    font-size: 8px;
   }
 }
 </style>

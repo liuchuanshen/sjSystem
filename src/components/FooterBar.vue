@@ -2,19 +2,19 @@
   <footer class="footer">
     <div class="footer__qrcode-row">
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCode/QRCODE-WECHAT.png" alt="建房顾问">
+        <img src="@/assets/picture/qrCodePic/QRCODE-WECHAT.png" alt="建房顾问">
         <div class="footer__qrcode-label">建房顾问</div>
       </div>
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCode/QRCODE-WechatPublicAccount.png" alt="微信公众号">
+        <img src="@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.png" alt="微信公众号">
         <div class="footer__qrcode-label">微信公众号</div>
       </div>
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCode/QRCODE-TIKTOK.png" alt="官方抖音">
+        <img src="@/assets/picture/qrCodePic/QRCODE-TIKTOK.png" alt="官方抖音">
         <div class="footer__qrcode-label">官方抖音</div>
       </div>
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCode/QRCODE-REDNOTE.png" alt="官方小红书">
+        <img src="@/assets/picture/qrCodePic/QRCODE-REDNOTE.png" alt="官方小红书">
         <div class="footer__qrcode-label">官方小红书</div>
       </div>
     </div>
@@ -22,24 +22,23 @@
     <div class="footer__main">
       <div class="footer__contact">
         <div>热线电话：131-3848-4787</div>
-        <div>联系邮箱：tonightf9u@qq.com</div>
-        <div>上班时间：每天09:30-22:00</div>
+        <div>联系邮箱：xshonex@qq.com</div>
         <div>公司地址：广州市花都区</div>
       </div>
       <div class="footer__company-info">
-        广花设计是农村别墅设计公司，承接现代别墅、中式别墅、欧式别墅，独栋别墅、双拼别墅、农村小别墅、一层别墅、两层别墅、三层别墅设计与建造。
+        广花设计承接室内设计、建筑设计、厂房新建及改扩建、光伏、机电设计、结构加固，欢迎咨询。
       </div>
     </div>
 
     <div class="footer__bottom">
       <div class="footer__links">
-        友情链接：消防公司加盟 | 建筑设计公司加盟 | 成都店铺装修
+        友情链接：
+        <el-link :underline="false" @click="goHome" class="footer__link">建筑设计公司加盟</el-link> |
+        <el-link :underline="false" @click="goHome" class="footer__link">室内设计公司加盟</el-link>
       </div>
-      <div class="footer__copyright">
-        ©2025 广花设计 版权所有<br>
-        <!-- 手机版 | 渝ICP备2021002672号-1 -->
-      </div>
-      <div class="footer__phone">13138484787</div>
+    </div>
+    <div class="footer__copyright">
+      ©2025 广花设计 版权所有<br>
     </div>
   </footer>
 </template>
@@ -47,7 +46,12 @@
 
 <script>
 export default {
-  name: 'FooterBar'
+  name: 'FooterBar',
+   methods: {
+    goHome() {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
 }
 </script>
 
@@ -122,18 +126,22 @@ export default {
   border-top: 1px solid #333;
   padding: 18px 0 10px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: center;
   font-size: 14px;
 }
 
 .footer__links {
   color: #aaa;
-  flex: 2;
-  min-width: 300px;
+}
+
+.footer__link {
+  margin: 0 5px;
+  color: #007bff;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
 }
 
 .footer__copyright {
@@ -141,15 +149,7 @@ export default {
   flex: 1;
   text-align: center;
   min-width: 200px;
-}
-
-.footer__phone {
-  color: #aaa;
-  flex: 0 0 120px;
-  text-align: right;
-  font-family: monospace;
-  font-size: 18px;
-  letter-spacing: 4px;
+  padding: 10px 0 10px 0;
 }
 
 /* 移动端适配 */
