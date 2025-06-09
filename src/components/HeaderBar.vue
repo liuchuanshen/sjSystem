@@ -1,7 +1,6 @@
 <template>
   <header class="header">
-    <!-- <div class="logo-group">广花设计</div> -->
-    <div class="logo-group">XXX</div>
+    <div class="logo-group">广花设计</div>
     <div class="header-contact">
      <!--  <img src="../assets/picture/header/phone.svg" alt="电话" class="contact-icon" /> -->
       <i class="el-icon-phone"></i>
