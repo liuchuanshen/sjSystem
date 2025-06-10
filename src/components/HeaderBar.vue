@@ -66,6 +66,14 @@ export default {
   padding-left: 60px; /* 增加左侧与phone.svg的边距，默认图标宽度24px + 间距26px */
 }
 
+/* 适配中等屏幕（如平板） */
+@media screen and (max-width: 1024px) {
+  .logo-group {
+    font-size: 24px;
+    min-width: 20%;
+  }
+}
+
 /* 移动端适配 */
 @media screen and (max-width: 768px) {
   .header {
@@ -73,8 +81,9 @@ export default {
     padding: 0 20px;
   }
 
-  .logo-group {
-    font-size: 30px;
+ .logo-group {
+    font-size: 26px;
+    text-align: left;
   }
 
   .header-contact {
@@ -89,5 +98,15 @@ export default {
     gap: 0;
   }
 }
+
+/* 超小屏（如小手机） */
+@media screen and (max-width: 480px) {
+  .logo-group {
+    font-size: 22px;
+    max-width: 50%;
+  }
+}
+
+
 
 </style>
