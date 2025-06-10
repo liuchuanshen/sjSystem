@@ -4,8 +4,10 @@
     <div class="header-contact">
      <!--  <img src="../assets/picture/header/phone.svg" alt="电话" class="contact-icon" /> -->
       <i class="el-icon-phone"></i>
-      <span class="header-phone">131-3848-4787</span>
-      <span>185-8868-6184</span>
+      <div class="header-phone">
+        <span>131-3848-4787</span>
+        <span>185-8868-6184</span>
+      </div>
     </div>
   </header>
 </template>
@@ -81,12 +83,10 @@ export default {
     padding-left: 40px;
   }
 
-  .header-contact span {
-    display: none;
-  }
-
   .header-contact .header-phone {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 }
 

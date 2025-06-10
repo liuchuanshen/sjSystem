@@ -153,6 +153,27 @@ export default {
 }
 
 /* 移动端适配 */
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer__qrcode-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .footer__qrcode-label,
+  .footer__company-info,
+  .footer__contact {
+    font-size: 12px;
+  }
+
+  .footer__phone {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .footer {
     padding-top: 30px;
@@ -206,4 +227,25 @@ export default {
     letter-spacing: 2px;
   }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    padding: 40px 30px;
+  }
+
+  .footer__main {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .footer__qrcode-item img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .footer__qrcode-label {
+    font-size: 16px;
+  }
+}
+
 </style>

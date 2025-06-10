@@ -120,5 +120,74 @@ export default {
 /deep/ .el-tabs__item:hover {
   color: rgba(214, 181, 127, 1) !important;
 }
+
+/* ---------- 响应式适配 ---------- */
+
+/* ≤1200px：适度收缩 main padding */
+@media screen and (max-width: 1200px) {
+  .main {
+    padding: 0 100px;
+  }
+}
+
+/* ≤1024px：缩小 padding，缩放图片 */
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 0 60px;
+  }
+  .image-item,
+  .image-desc {
+    width: 180px;
+    height: 130px;
+  }
+}
+
+/* ≤768px：更小 padding 和图片宽度 */
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 0 16px;
+  }
+  .image-grid {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .image-item,
+  .image-desc {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ≤600px：一行两张图片 */
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 0 16px;
+  }
+  .image-grid {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .image-item,
+  .image-desc {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ≤480px：单列显示 */
+@media screen and (max-width: 480px) {
+  .main {
+    padding: 0 16px;
+  }
+  .image-grid {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .image-item,
+  .image-desc {
+    width: 100%;
+    height: auto;
+  }
+}
 </style>
 

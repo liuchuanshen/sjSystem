@@ -49,6 +49,7 @@
       <div class="scope__title title-small">
         <span>专业团队，匠心筑家</span>
       </div>
+      <el-button type="primary" @click="dialogVisible = true" class="appointmentButton">预约咨询</el-button>
     </div>
     <!-- 页脚 -->
     <FooterBar />

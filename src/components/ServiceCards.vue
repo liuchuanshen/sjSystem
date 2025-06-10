@@ -52,14 +52,11 @@ export default {
 }
 
 .service__list {
-  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 24px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
   padding: 0 20px;
 }
 
@@ -108,59 +105,5 @@ export default {
   letter-spacing: 1px;
 }
 
-/* 响应式布局 */
-@media (max-width: 1000px) {
-  .service__list { gap: 18px; }
-  .service__item { max-width: 48%; min-width: 180px; }
-}
-
-@media (max-width: 700px) {
-  .service__list { flex-direction: column; gap: 16px; }
-  .service__item { max-width: 100%; }
-}
-
-/* 移动端适配 */
-@media screen and (max-width: 768px) {
-  .service {
-    padding: 40px 0 20px;
-  }
-
-  .service__list {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .service__item {
-    max-width: 100%;
-    min-width: 100%;
-    padding: 20px 15px;
-  }
-
-  .service__icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 12px;
-  }
-
-  .service__title {
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-
-  .service__desc {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .scope {
-    padding: 30px 0 20px;
-  }
-
-  .scope__title {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    padding: 0 20px;
-  }
-}
 </style>
 
