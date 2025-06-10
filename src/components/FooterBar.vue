@@ -2,19 +2,39 @@
   <footer class="footer">
     <div class="footer__qrcode-row">
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCodePic/QRCODE-WECHAT.png" alt="建房顾问">
+        <el-image
+          class="image-item"
+          fit="cover"
+          :src="require('@/assets/picture/qrCodePic/QRCODE-WECHAT.png')"
+          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-WECHAT.png')]"
+        />
         <div class="footer__qrcode-label">建房顾问</div>
       </div>
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.png" alt="微信公众号">
+        <el-image
+          class="image-item"
+          fit="cover"
+          :src="require('@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.png')"
+          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.png')]"
+        />
         <div class="footer__qrcode-label">微信公众号</div>
       </div>
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCodePic/QRCODE-TIKTOK.png" alt="官方抖音">
+        <el-image
+          class="image-item"
+          fit="cover"
+          :src="require('@/assets/picture/qrCodePic/QRCODE-TIKTOK.png')"
+          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-TIKTOK.png')]"
+        />
         <div class="footer__qrcode-label">官方抖音</div>
       </div>
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCodePic/QRCODE-REDNOTE.png" alt="官方小红书">
+        <el-image
+          class="image-item"
+          fit="cover"
+          :src="require('@/assets/picture/qrCodePic/QRCODE-REDNOTE.png')"
+          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-REDNOTE.png')]"
+        />
         <div class="footer__qrcode-label">官方小红书</div>
       </div>
     </div>
@@ -76,9 +96,8 @@ export default {
   text-align: center;
 }
 
-.footer__qrcode-item img {
-  width: 248px;
-  height: 248px;
+.footer__qrcode-item .image-item {
+  height: 160px;
   background: #fff;
   border: 4px solid #fff;
   border-radius: 12px;
@@ -158,9 +177,8 @@ export default {
     padding: 20px 10px;
   }
 
-  .footer__qrcode-item img {
-    width: 100px;
-    height: 100px;
+  .footer__qrcode-item .image-item {
+    height: 160px;
   }
 
   .footer__qrcode-label,
@@ -185,10 +203,8 @@ export default {
     padding: 20px;
   }
 
-  .footer__qrcode-item img {
-    width: 120px;
-    height: 120px;
-    border: 2px solid #fff;
+  .footer__qrcode-item .image-item {
+    height: 160px;
   }
 
   .footer__qrcode-label {
@@ -238,9 +254,8 @@ export default {
     gap: 40px;
   }
 
-  .footer__qrcode-item img {
-    width: 140px;
-    height: 140px;
+  .footer__qrcode-item .image-item {
+    height: 160px;
   }
 
   .footer__qrcode-label {
