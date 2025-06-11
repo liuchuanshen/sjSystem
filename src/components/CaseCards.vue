@@ -15,6 +15,7 @@
                   :src="item.src"
                   fit="cover"
                   class="image-item"
+                  :preview-src-list="[item.src]"
                 />
                 <div class="image-desc">{{ getFileName(item.name) }}</div>
               </div>
