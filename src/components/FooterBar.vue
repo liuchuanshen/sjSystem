@@ -2,19 +2,19 @@
   <footer class="footer">
     <div class="footer__qrcode-row">
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCodePic/QRCODE-WECHAT.png" alt="建房顾问">
+        <img src="@/assets/picture/qrCodePic/QRCODE-WECHAT.jpg" alt="建房顾问">
         <div class="footer__qrcode-label">建房顾问</div>
       </div>
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.png" alt="微信公众号">
+        <img src="@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.jpg" alt="微信公众号">
         <div class="footer__qrcode-label">微信公众号</div>
       </div>
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCodePic/QRCODE-TIKTOK.png" alt="官方抖音">
+        <img src="@/assets/picture/qrCodePic/QRCODE-TIKTOK.jpg" alt="官方抖音">
         <div class="footer__qrcode-label">官方抖音</div>
       </div>
       <div class="footer__qrcode-item">
-        <img src="@/assets/picture/qrCodePic/QRCODE-REDNOTE.png" alt="官方小红书">
+        <img src="@/assets/picture/qrCodePic/QRCODE-REDNOTE.jpg" alt="官方小红书">
         <div class="footer__qrcode-label">官方小红书</div>
       </div>
     </div>
@@ -22,6 +22,7 @@
     <div class="footer__main">
       <div class="footer__contact">
         <div>热线电话：131-3848-4787</div>
+        <div>{{ '&nbsp;'.repeat(22) }}185-8868-6184</div>
         <div>联系邮箱：xshonex@qq.com</div>
         <div>公司地址：广州市花都区</div>
       </div>

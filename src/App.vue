@@ -108,7 +108,7 @@ export default {
         desc: ''
       },
       currentIndex: 0,
-      menuList: ['室内设计', '建筑设计', '厂房新建及改扩建', '光伏', '机电设计', '结构加固'],
+      menuList: ['室内设计', '建筑设计', '厂房新建及改扩建', '光伏', '机电设计', '结构加固', '合作联系'],
       rules: {
         name: [
           { required: true, message: '请输入姓名', trigger: 'blur' }
@@ -136,9 +136,9 @@ export default {
         }
 
         this.isSubmitting = true // 禁用按钮防止多次点击
-        const serviceID = 'your_service_id'
-        const templateID = 'your_template_id'
-        const userID = 'your_user_id'
+        const serviceID = 'xshonex'
+        const templateID = 'template_omfvk5b'
+        const userID = 'cRWZd-dgrAgofJwU6'
         const templateParams = {
           name: this.form.name,
           phone: this.form.phone,

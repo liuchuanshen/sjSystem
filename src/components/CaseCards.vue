@@ -34,23 +34,75 @@ export default {
     return {
       activeTab: '0',
       tabs: [
-        { label: '现代风格' },
-        { label: '中式风格' },
-        { label: '欧式风格' }
+        { label: '室内设计' },
+        { label: '建筑设计' },
+        { label: '厂房新建及改扩建' },
+        { label: '光伏' },
+        { label: '机电设计' },
+        { label: '结构加固' }
       ],
       allImages: [
         [
-          { src: require('@/assets/picture/carouselPic/SNSJ/01.jpg'), name: '01' },
-          { src: require('@/assets/picture/carouselPic/SNSJ/02.jpg'), name: '02' },
-          { src: require('@/assets/picture/carouselPic/SNSJ/03.png'), name: '03' }
-        ], // 现代风格
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/01.jpg'), name: '01' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/02.jpg'), name: '02' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/03.jpg'), name: '03' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/04.jpg'), name: '04' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/05.jpg'), name: '05' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/06.jpg'), name: '06' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/07.jpg'), name: '07' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/08.jpg'), name: '08' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/09.jpg'), name: '09' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/10.jpg'), name: '10' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/11.jpg'), name: '11' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/12.jpg'), name: '12' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/13.jpg'), name: '13' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/14.jpg'), name: '14' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/15.jpg'), name: '15' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/16.jpg'), name: '16' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/17.jpg'), name: '17' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/18.jpg'), name: '18' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/19.jpg'), name: '19' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/20.jpg'), name: '20' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/21.jpg'), name: '21' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/22.jpg'), name: '22' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/23.jpg'), name: '23' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/24.jpg'), name: '24' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/25.jpg'), name: '25' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/26.jpg'), name: '26' },
+          { src: require('@/assets/picture/CaseCardsPic/SNSJ/27.jpg'), name: '27' }
+
+        ], // 室内设计
         [
-          { src: require('@/assets/picture/carouselPic/JZSJ/01.jpg'), name: '01' },
-          { src: require('@/assets/picture/carouselPic/JZSJ/02.png'), name: '02' },
-          { src: require('@/assets/picture/carouselPic/JZSJ/03.png'), name: '03' },
-          { src: require('@/assets/picture/carouselPic/JZSJ/04.jpg'), name: '04' }
-        ], // 中式风格
-        [] // 欧式风格
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/01.jpg'), name: '01' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/02.jpg'), name: '02' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/03.jpg'), name: '03' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/04.jpg'), name: '04' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/05.jpg'), name: '05' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/06.jpg'), name: '06' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/07.jpg'), name: '07' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/08.jpg'), name: '08' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/09.jpg'), name: '09' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/10.jpg'), name: '10' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/11.jpg'), name: '11' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/12.jpg'), name: '12' },
+          { src: require('@/assets/picture/CaseCardsPic/JZSJ/13.jpg'), name: '13' }
+        ], // 建筑设计
+        [
+          { src: require('@/assets/picture/CaseCardsPic/CFSJ/01.jpg'), name: '01' },
+          { src: require('@/assets/picture/CaseCardsPic/CFSJ/02.jpg'), name: '02' },
+          { src: require('@/assets/picture/CaseCardsPic/CFSJ/03.jpg'), name: '03' },
+          { src: require('@/assets/picture/CaseCardsPic/CFSJ/04.jpg'), name: '04' },
+          { src: require('@/assets/picture/CaseCardsPic/CFSJ/05.jpg'), name: '05' },
+          { src: require('@/assets/picture/CaseCardsPic/CFSJ/06.jpg'), name: '06' },
+          { src: require('@/assets/picture/CaseCardsPic/CFSJ/07.jpg'), name: '07' },
+          { src: require('@/assets/picture/CaseCardsPic/CFSJ/08.jpg'), name: '08' },
+
+
+        ], // 厂房新建及改扩建
+        [], // 光伏
+        [], // 机电设计
+        [] // 结构加固
+
       ]
     }
   },

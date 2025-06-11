@@ -5,8 +5,8 @@
      <!--  <img src="../assets/picture/header/phone.svg" alt="电话" class="contact-icon" /> -->
       <i class="el-icon-phone"></i>
       <div class="header-phone">
-        <span>131-3848-4787</span>
-        <span>185-8868-6184</span>
+        <span>{{ '&nbsp;'.repeat(2) }}131-3848-4787</span>
+        <span>{{ '&nbsp;'.repeat(2) }}185-8868-6184</span>
       </div>
     </div>
   </header>
@@ -50,6 +50,7 @@ export default {
   height: 100%;
   display: flex;
   align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
 }
 
 .header-contact {
@@ -69,7 +70,7 @@ export default {
 /* 适配中等屏幕（如平板） */
 @media screen and (max-width: 1024px) {
   .logo-group {
-    font-size: 24px;
+    font-size: 30px;
     min-width: 20%;
   }
 }
@@ -82,7 +83,7 @@ export default {
   }
 
  .logo-group {
-    font-size: 26px;
+    font-size: 30px;
     text-align: left;
   }
 
@@ -102,7 +103,7 @@ export default {
 /* 超小屏（如小手机） */
 @media screen and (max-width: 480px) {
   .logo-group {
-    font-size: 22px;
+    font-size: 30px;
     max-width: 50%;
   }
 }
