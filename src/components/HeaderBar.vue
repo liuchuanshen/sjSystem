@@ -88,7 +88,7 @@ export default {
   }
 
   .header-contact {
-    font-size: 16px;
+    font-size: 12px;
     min-width: 200px;
     padding-left: 40px;
   }
