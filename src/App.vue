@@ -39,7 +39,7 @@
     </div>
 
     <!-- 案例 -->
-    <CaseCards />
+    <CaseCards :categoryIndex="currentIndex"/>
     
     <div class="scope">
       <div class="scope__title title-bold">

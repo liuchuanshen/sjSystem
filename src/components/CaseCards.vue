@@ -31,6 +31,12 @@
 <script>
 export default {
   name: 'CaseCards',
+  props: {
+    categoryIndex: {
+      type: Number,
+      required: true
+    }
+  },
   data() {
     return {
       activeTab: '0',
@@ -105,6 +111,17 @@ export default {
         [] // 结构加固
 
       ]
+    }
+  },
+  watch: {
+    categoryIndex(newIndex) {
+      const index = Number(newIndex);
+      if (index >= 0 && index < this.tabs.length) {
+        this.activeTab = index.toString();
+      } else {
+        // 如果 index 超出范围，就默认选最后一个 tab
+        this.activeTab = (this.tabs.length - 1).toString();
+      }
     }
   },
   methods: {

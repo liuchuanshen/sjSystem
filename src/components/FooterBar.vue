@@ -5,8 +5,8 @@
         <el-image
           class="image-item"
           fit="cover"
-          :src="require('@/assets/picture/qrCodePic/QRCODE-WECHAT.png')"
-          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-WECHAT.png')]"
+          :src="require('@/assets/picture/qrCodePic/QRCODE-WECHAT.jpg')"
+          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-WECHAT.jpg')]"
         />
         <div class="footer__qrcode-label">建房顾问</div>
       </div>
@@ -14,8 +14,8 @@
         <el-image
           class="image-item"
           fit="cover"
-          :src="require('@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.png')"
-          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.png')]"
+          :src="require('@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.jpg')"
+          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-WechatPublicAccount.jpg')]"
         />
         <div class="footer__qrcode-label">微信公众号</div>
       </div>
@@ -23,8 +23,8 @@
         <el-image
           class="image-item"
           fit="cover"
-          :src="require('@/assets/picture/qrCodePic/QRCODE-TIKTOK.png')"
-          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-TIKTOK.png')]"
+          :src="require('@/assets/picture/qrCodePic/QRCODE-TIKTOK.jpg')"
+          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-TIKTOK.jpg')]"
         />
         <div class="footer__qrcode-label">官方抖音</div>
       </div>
@@ -32,8 +32,8 @@
         <el-image
           class="image-item"
           fit="cover"
-          :src="require('@/assets/picture/qrCodePic/QRCODE-REDNOTE.png')"
-          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-REDNOTE.png')]"
+          :src="require('@/assets/picture/qrCodePic/QRCODE-REDNOTE.jpg')"
+          :preview-src-list="[require('@/assets/picture/qrCodePic/QRCODE-REDNOTE.jpg')]"
         />
         <div class="footer__qrcode-label">官方小红书</div>
       </div>
@@ -41,8 +41,13 @@
 
     <div class="footer__main">
       <div class="footer__contact">
-        <div>热线电话：131-3848-4787</div>
-        <div>{{ '&nbsp;'.repeat(22) }}185-8868-6184</div>
+       <div class="hotline-container">
+          <div class="hotline-title">热线电话：</div>
+          <div class="hotline-numbers">
+            <div>131-3848-4787</div>
+            <div>185-8868-6184</div>
+          </div>
+        </div>
         <div>联系邮箱：xshonex@qq.com</div>
         <div>公司地址：广州市花都区</div>
       </div>
@@ -170,6 +175,24 @@ export default {
   text-align: center;
   min-width: 200px;
   padding: 10px 0 10px 0;
+}
+
+.hotline-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hotline-title {
+  flex-shrink: 0;
+  min-width: 80px;
+  font-weight: bold;
+}
+
+.hotline-numbers {
+  flex: 1;
 }
 
 /* 移动端适配 */
