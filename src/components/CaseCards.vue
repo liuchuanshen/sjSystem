@@ -106,9 +106,52 @@ export default {
 
 
         ], // 厂房新建及改扩建
-        [], // 光伏
+        [
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/01.jpg'), name: '01' },
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/02.jpg'), name: '02' },
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/03.jpg'), name: '03' },
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/04.jpg'), name: '04' },
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/05.jpg'), name: '05' },
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/06.jpg'), name: '06' },
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/07.jpg'), name: '07' },
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/08.jpg'), name: '08' },
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/09.jpg'), name: '09' },
+          { src: require('@/assets/picture/CaseCardsPic/GFSJ/10.jpg'), name: '10' }
+        ], // 光伏
         [], // 机电设计
-        [] // 结构加固
+        [
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/01.jpg'), name: '01' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/02.jpg'), name: '02' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/03.jpg'), name: '03' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/04.jpg'), name: '04' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/05.jpg'), name: '05' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/06.jpg'), name: '06' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/07.jpg'), name: '07' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/08.jpg'), name: '08' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/09.jpg'), name: '09' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/10.jpg'), name: '10' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/11.jpg'), name: '11' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/12.jpg'), name: '12' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/13.jpg'), name: '13' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/14.jpg'), name: '14' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/15.jpg'), name: '15' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/16.jpg'), name: '16' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/17.jpg'), name: '17' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/18.jpg'), name: '18' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/19.jpg'), name: '19' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/20.jpg'), name: '20' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/21.jpg'), name: '21' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/22.jpg'), name: '22' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/23.jpg'), name: '23' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/24.jpg'), name: '24' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/25.jpg'), name: '25' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/26.jpg'), name: '26' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/27.jpg'), name: '27' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/28.jpg'), name: '28' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/29.jpg'), name: '29' },
+          { src: require('@/assets/picture/CaseCardsPic/JGJGSJ/30.jpg'), name: '30' }
+
+        ] // 结构加固
 
       ]
     }

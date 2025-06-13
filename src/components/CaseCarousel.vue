@@ -51,9 +51,11 @@ export default {
           require('@/assets/picture/CaseCarouselPic/CFSJ/03.jpg')
         ], // 厂房新建及改扩建
         [
-          // require('@/assets/picture/CaseCarouselPic/GFSJ/01.jpg'),
-          // require('@/assets/picture/CaseCarouselPic/GFSJ/02.jpg'),
-          // require('@/assets/picture/CaseCarouselPic/GFSJ/03.jpg')
+          require('@/assets/picture/CaseCarouselPic/GFSJ/01.jpg'),
+          require('@/assets/picture/CaseCarouselPic/GFSJ/02.jpg'),
+          require('@/assets/picture/CaseCarouselPic/GFSJ/03.jpg'),
+          require('@/assets/picture/CaseCarouselPic/GFSJ/04.jpg'),
+          require('@/assets/picture/CaseCarouselPic/GFSJ/05.jpg')
         ], // 光伏
         [
           // require('@/assets/picture/CaseCarouselPic/JDSJ/01.jpg'),
@@ -61,9 +63,12 @@ export default {
           // require('@/assets/picture/CaseCarouselPic/JDSJ/03.jpg')
         ], // 机电设计
         [
-          // require('@/assets/picture/CaseCarouselPic/JGJGSJ/01.jpg'),
-          // require('@/assets/picture/CaseCarouselPic/JGJGSJ/02.jpg'),
-          // require('@/assets/picture/CaseCarouselPic/JGJGSJ/03.jpg')
+          require('@/assets/picture/CaseCarouselPic/JGJGSJ/01.jpg'),
+          require('@/assets/picture/CaseCarouselPic/JGJGSJ/02.jpg'),
+          require('@/assets/picture/CaseCarouselPic/JGJGSJ/03.jpg'),
+          require('@/assets/picture/CaseCarouselPic/JGJGSJ/04.jpg'),
+          require('@/assets/picture/CaseCarouselPic/JGJGSJ/05.jpg'),
+          require('@/assets/picture/CaseCarouselPic/JGJGSJ/06.jpg')
         ],  // 结构加固
       ];
       return allImages[this.categoryIndex] || [];
