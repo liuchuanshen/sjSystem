@@ -213,7 +213,7 @@ export default {
 
 .appointmentButton{
   width: 20%;
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 .scope {
