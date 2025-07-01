@@ -212,7 +212,7 @@ export default {
 }
 
 .appointmentButton{
-  width: 20%;
+  /* width: 20%; */
   margin-top: 20px !important;
 }
 
@@ -272,6 +272,15 @@ export default {
 
   .menu {
     font-size: 8px;
+    gap: 20px
+  }
+
+  .scope__title{
+    font-size: 12px;
+  }
+
+  .title-bold{
+    font-size: 30px;
   }
 }
 </style>

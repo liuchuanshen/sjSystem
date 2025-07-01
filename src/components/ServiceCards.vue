@@ -52,7 +52,7 @@ export default {
 }
 
 .service__list {
-  width: 80%;
+  /* width: 80%; */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -105,5 +105,15 @@ export default {
   letter-spacing: 1px;
 }
 
+@media (max-width: 600px) {
+  .service__list {
+    gap: 12px;
+    padding: 0 12px;
+  }
+  .service__item {
+    max-width: none;
+    padding: 20px 10px;
+  }
+}
 </style>
 

@@ -202,7 +202,7 @@ export default {
   }
 
   .footer__qrcode-item .image-item {
-    height: 160px;
+    height: 70px;
   }
 
   .footer__qrcode-label,
@@ -212,7 +212,7 @@ export default {
   }
 
   .footer__phone {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -228,7 +228,7 @@ export default {
   }
 
   .footer__qrcode-item .image-item {
-    height: 160px;
+    height: 70px;
   }
 
   .footer__qrcode-label {
@@ -244,7 +244,7 @@ export default {
   .footer__contact,
   .footer__company-info {
     min-width: 100%;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1.8;
   }
 
@@ -260,11 +260,24 @@ export default {
   .footer__phone {
     min-width: 100%;
     text-align: center;
+    font-size: 10px;
   }
 
   .footer__phone {
-    font-size: 16px;
+    font-size: 10px;
     letter-spacing: 2px;
+  }
+
+  .hotline-container{
+    font-size: 10px;
+  }
+
+  .hotline-title{
+    min-width: 0
+  }
+
+  .el-link{
+    font-size: 10px;
   }
 }
 
@@ -279,7 +292,7 @@ export default {
   }
 
   .footer__qrcode-item .image-item {
-    height: 160px;
+    height: 70px;
   }
 
   .footer__qrcode-label {
