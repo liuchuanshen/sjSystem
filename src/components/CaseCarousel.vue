@@ -33,18 +33,18 @@ export default {
     filteredImages() {
       const allImages = [
         [
+          require('@/assets/picture/CaseCarouselPic/JZSJ/01.jpg'),
+          require('@/assets/picture/CaseCarouselPic/JZSJ/02.jpg'),
+          require('@/assets/picture/CaseCarouselPic/JZSJ/03.jpg'),
+          require('@/assets/picture/CaseCarouselPic/JZSJ/04.jpg')
+        ], // 建筑设计
+        [
           require('@/assets/picture/CaseCarouselPic/SNSJ/01.jpg'),
           require('@/assets/picture/CaseCarouselPic/SNSJ/02.jpg'),
           require('@/assets/picture/CaseCarouselPic/SNSJ/03.jpg')
 
 
         ], // 室内设计
-        [
-          require('@/assets/picture/CaseCarouselPic/JZSJ/01.jpg'),
-          require('@/assets/picture/CaseCarouselPic/JZSJ/02.jpg'),
-          require('@/assets/picture/CaseCarouselPic/JZSJ/03.jpg'),
-          require('@/assets/picture/CaseCarouselPic/JZSJ/04.jpg')
-        ], // 建筑设计
         [
           require('@/assets/picture/CaseCarouselPic/CFSJ/01.jpg'),
           require('@/assets/picture/CaseCarouselPic/CFSJ/02.jpg'),

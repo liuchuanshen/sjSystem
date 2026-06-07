@@ -17,11 +17,16 @@
     <CaseCarousel :categoryIndex="currentIndex" />
     <div class="scope">
       <div class="scope__title title-bold">
-        <span class="highlight">预约咨询</span> 
-        <span>开启省心服务</span>
+        <span class="highlight">致电咨询：13138484787，18588686184，<br></span>
+        <span class="highlight">或点击下方按钮预约咨询，<br></span> 
+        <span class="highlight">或扫描网页底部各平台二维码咨询</span> 
       </div>
       <div class="scope__title title-small">
-        <span>每一次服务中的细节,都是对您建房体验的执着追求</span>
+        <span>
+          我们总部在广州，服务珠三角。<br><br>
+          专业承接建筑设计、混凝土结构设计、钢结构设计、水暖电设计、动力设计、幕墙设计、室内设计、室内水暖电、空调通风地暖设计、管道支架设计、消防设计、园林景观设计、市政道路设计、BIM正向设计等等。<br><br>
+          方案设计，效果图设计，施工图设计，各种工程设计包您满意。专业出施工图，可以出效果图+全专业施工图+预算造价，包审图通过。只有问不到，没有做不到，欢迎各位领导老板咨询。<br>
+        </span>
       </div>
       <el-button type="primary" @click="dialogVisible = true" class="appointmentButton">预约咨询</el-button>
     </div>
@@ -31,8 +36,7 @@
     <div class="scope">
       <div class="scope__title title-bold">
         <span class="highlight">1000+</span> 
-        <span>原创案例赏鉴</span
-      ></div>
+        <span>原创案例赏鉴</span></div>
       <div class="scope__title title-small">
         <span>选自己喜欢的风格,过自己喜欢的生活</span>
       </div>
@@ -108,7 +112,7 @@ export default {
         desc: ''
       },
       currentIndex: 0,
-      menuList: ['室内设计', '建筑设计', '厂房新建及改扩建', '光伏', '机电设计', '结构加固', '合作联系'],
+      menuList: ['建筑设计', '室内设计', '厂房新建及改扩建', '光伏', '机电设计', '结构加固', '合作联系'],
       rules: {
         name: [
           { required: true, message: '请输入姓名', trigger: 'blur' }
