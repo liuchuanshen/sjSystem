@@ -1,4 +1,5 @@
 module.exports = {
+    publicPath: '/sjSystem/',
     devServer: {
       host: 'localhost', // 本地地址
       port: 8080, // 端口号
